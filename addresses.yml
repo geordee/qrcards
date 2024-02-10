@@ -1,0 +1,8 @@
+- name: Doe;John
+  display: John Doe
+  emails:
+    - john.doe@example.com
+  phones:
+    - "+971000000000"
+  urls:
+    -  https://example.com/johndoe
