@@ -19,4 +19,9 @@ def generate():
     qrcode = helpers.make_vcard(name=name, displayname=address['display'],
                                 email=address['emails'], phone=address['phones'],
                                 url=address['urls'])
-    qrcode.save(f'cards/{slugify(name)}.svg', scale=4)
+    qrcode.save(f'cards/vcards/{slugify(name)}.svg', scale=4)
+
+    me_name = ','.join(name.split(';'))
+    qrcode = helpers.make_mecard(name=me_name,
+                                 email=address['emails'], phone=address['phones'])
+    qrcode.save(f'cards/mecards/{slugify(name)}.svg', scale=4)
