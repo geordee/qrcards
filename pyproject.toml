@@ -8,11 +8,13 @@ authors = [
 dependencies = [
     "segno>=1.6.1",
     "pyyaml>=6.0.1",
+    "flask>=3.0.2",
 ]
 readme = "readme.md"
 requires-python = ">= 3.8"
 
 [project.scripts]
+web = "qrcards:web"
 generate = "qrcards:generate"
 
 [build-system]

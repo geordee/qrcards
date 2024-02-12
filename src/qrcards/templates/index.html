@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>QRCards</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+  </head>
+  <body>
+    <section id="form">
+      <main>
+        <center>
+          <h1>MeCard</h1>
+          <img src="{{ url_for('qrcode_svg', data=data) }}">
+        </center>
+      </main>
+      <form action="/">
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name" size="28" placeholder="First Name">
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" size="28" placeholder="Last Name">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" size="28" placeholder="Email">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" size="28" placeholder="Phone">
+        <label for="url">URL</label>
+        <input type="text" id="url" name="url" size="28" placeholder="URL">
+        <button type="submit" id="show">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
