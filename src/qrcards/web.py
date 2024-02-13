@@ -16,17 +16,19 @@ def home():
   last_name = request.args.get('last_name')
   email = request.args.get('email')
   phone = request.args.get('phone')
+  url = request.args.get('url')
 
   data = {
     'first_name': first_name,
     'last_name': last_name,
     'email': email,
-    'phone': phone
+    'phone': phone,
+    'url': url
   }
 
   base64_data = base64.b64encode(json.dumps(data).encode('utf-8'))
 
-  return render_template('index.html', data=base64_data)
+  return render_template('index.html', data=data, base64_data=base64_data)
 
 @app.route('/qr/' , methods = ['GET', 'POST'])
 def qrcode_svg():

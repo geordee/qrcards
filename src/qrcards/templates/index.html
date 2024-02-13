@@ -10,20 +10,20 @@
       <main>
         <center>
           <h1>MeCard</h1>
-          <img src="{{ url_for('qrcode_svg', data=data) }}">
+          <img src="{{ url_for('qrcode_svg', data=base64_data) }}">
         </center>
       </main>
       <form action="/">
         <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" size="28" placeholder="First Name">
+        <input type="text" id="first_name" name="first_name" size="28" placeholder="First Name" value="{{data.get('first_name')}}">
         <label for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name" size="28" placeholder="Last Name">
+        <input type="text" id="last_name" name="last_name" size="28" placeholder="Last Name" value="{{data.get('last_name')}}">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" size="28" placeholder="Email">
+        <input type="email" id="email" name="email" size="28" placeholder="Email" value="{{data.get('email')}}">
         <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" size="28" placeholder="Phone">
+        <input type="tel" id="phone" name="phone" size="28" placeholder="Phone" value="{{data.get('phone')}}">
         <label for="url">URL</label>
-        <input type="text" id="url" name="url" size="28" placeholder="URL">
+        <input type="text" id="url" name="url" size="28" placeholder="URL" value="{{data.get('url')}}">
         <button type="submit" id="show">Submit</button>
       </form>
     </section>
