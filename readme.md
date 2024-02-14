@@ -8,3 +8,10 @@ Create QR Codes for Visiting Cards
 rye sync
 rye run generate
 ```
+
+## Web App
+
+```bash
+rye sync
+rye run web
+```
