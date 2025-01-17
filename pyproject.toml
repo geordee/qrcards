@@ -7,11 +7,11 @@ authors = [
 ]
 dependencies = [
     "segno>=1.6.1",
-    "pyyaml>=6.0.1",
-    "flask>=3.0.2",
+    "pyyaml>=6.0.2",
+    "flask>=3.1.0",
 ]
 readme = "readme.md"
-requires-python = ">= 3.8"
+requires-python = ">= 3.12"
 
 [project.scripts]
 web = "qrcards:web"

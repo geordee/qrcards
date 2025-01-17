@@ -2,16 +2,21 @@
 
 Create QR Codes for Visiting Cards
 
+## Setup
+
+```bash
+uv venv .venv
+uv sync
+```
+
 ## Run
 
 ```bash
-rye sync
-rye run generate
+uv run generate
 ```
 
 ## Web App
 
 ```bash
-rye sync
-rye run web
+uv run web
 ```
